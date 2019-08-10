@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    	http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd" version="2.1">
+    <!-- 描述 自定义标签版本的 一种描述 -->
+    <description>my page</description>	
+    <!-- 显示的名称 导包进行的一个展示 -->
+    <display-name>Pager core</display-name>
+    <!-- 版本号 -->
+    <tlib-version>1.0</tlib-version>
+    <!-- 短名 -->
+    <short-name>jkl</short-name>
+    <!-- uri：导包 -->
+    <uri>/pager</uri>
+    
+    <!-- 定义一个标签 -->
+    <tag>
+    	<!-- 标签名 -->
+    	<name>myPager</name>
+		<!-- 标签处理类 -->
+		<tag-class>org.jkl.hrm.util.tag.PagerTag</tag-class>
+		<!-- 设置标签为空 empty/JSP/scriptless/tagdependent-->
+		<body-content>empty</body-content>
+		
+		<!-- 定义标签的属性 pageIndex-->
+		<attribute>
+			<!-- 属性名  表示分页的第几页 -->
+			<name>pageIndex</name>
+			<!-- 必须的 -->
+			<required>true</required>
+			<!-- run time expression value 为true 支持EL表达式 -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<!-- 定义标签的属性 pageSize-->
+		<attribute>
+			<!-- 属性名  表示分页标签的页面大小/容量 -->
+			<name>pageSize</name>
+			<!-- 必须的 -->
+			<required>true</required>
+			<!-- run time expression value 为true 支持EL表达式 -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<!-- 定义标签的属性recordCount -->
+		<attribute>
+			<!-- 属性名  记录分页的总数 -->
+			<name>recordCount</name>
+			<!-- 必须的 -->
+			<required>true</required>
+			<!-- run time expression value 为true 支持EL表达式 -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<!-- 定义标签的属性 submitUrl-->
+		<attribute>
+			<!-- 属性名 -->
+			<name>submitUrl</name>
+			<!-- 必须的 -->
+			<required>true</required>
+			<!-- run time expression value 为true 支持EL表达式 -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<!-- 定义标签的属性 style-->
+		<attribute>
+			<!-- 属性名 -->
+			<name>style</name>
+			<!-- 必须的 -->
+			<required>true</required>
+			<!-- run time expression value 为true 支持EL表达式 -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+    </tag>
+</taglib>
